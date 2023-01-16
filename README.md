@@ -15,13 +15,13 @@
     pip install dlib
     ```
   将无法正常安装并有报错信息。
-  <br>你需要自行前往[清华大学镜像站](https://pypi.tuna.tsinghua.edu.cn/simple/dlib-bin/)下载 __Dlib__ 的 whl 文件，并在当前环境中安装。
-+ 在安装 __Dlib__ 库之前，还需要安装 __cmake__ 库和 __boost__ 库，执行下列命令即可安装
+  <br>你需要自行前往[ Dlib 官网](http://dlib.net/)并根据网站提供的[教程](http://dlib.net/compile.html)下载 __Dlib__ 的 whl 文件，在当前环境中安装。
++ 在安装 __Dlib__ 库之前，还需要安装 __cmake__ 库和 __boost__ 库，并需要有可用的 __C++__ 编译器，执行下列命令即可安装 __cmake__ 库和 __boost__ 库
     ```
     pip install cmake
     pip install boost
     ```
-  同样的，这两个库被写入到了 __requirements.txt__ 中，你也可以直接执行下列命令，一样可以完成安装
+  这两个库被写入到了 __requirements.txt__ 中，你也可以直接执行下列命令，一样可以完成安装
     ```
     pip install -r requirements.txt
     ```
