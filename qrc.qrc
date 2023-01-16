@@ -1,0 +1,11 @@
+<!DOCTYPE RCC>
+<RCC version="1.0">
+<qresource prefix="/">
+    <file>ae86.png</file>
+    <file>ae86_skyless.png</file>
+    <file>background1.png</file>
+    <file>background2.png</file>
+    <file>background3.png</file>
+</qresource>
+</RCC>
+
