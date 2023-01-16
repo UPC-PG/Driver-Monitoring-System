@@ -15,11 +15,7 @@
     pip install dlib
     ```
   将无法正常安装并有报错信息。
-  <br>你需要自行下载 __Dlib__ 的 whl 文件，由于本仓库提供有 __Python 3.9__ 版本的文件，因此如果你是在相同版本上配置的环境，那么你可以直接运行下列命令完成 __Dlib__ 的安装
-    ```
-    pip install -r requirements.txt
-    ```
-    或者，你可以自行前往[清华大学镜像站](https://pypi.tuna.tsinghua.edu.cn/simple/dlib-bin/)下载该文件。
+  <br>你需要自行前往[清华大学镜像站](https://pypi.tuna.tsinghua.edu.cn/simple/dlib-bin/)下载 __Dlib__ 的 whl 文件，并在当前环境中安装。
 + 在安装 __Dlib__ 库之前，还需要安装 __cmake__ 库和 __boost__ 库，执行下列命令即可安装
     ```
     pip install cmake
