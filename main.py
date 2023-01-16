@@ -337,11 +337,11 @@ class MainUI:
         self.drawMaps()
         # self.drawLine() 在 self.drawMaps() 调用
         # 绝对路径待查 ( ***** )
-        self.ui.radar.load(QUrl("radar.html"))
-        self.ui.map.load(QUrl("map.html"))
-        self.ui.line.load(QUrl("line.html"))
-        self.ui.pie.load(QUrl("pie.html"))
-        self.ui.block.load(QUrl("bar.html"))
+        self.ui.radar.load(QUrl("file:///radar.html"))
+        self.ui.map.load(QUrl("file:///map.html"))
+        self.ui.line.load(QUrl("file:///line.html"))
+        self.ui.pie.load(QUrl("file:///pie.html"))
+        self.ui.block.load(QUrl("file:///bar.html"))
 
     def drawRadar(self):
         tot = self.totalFrames
