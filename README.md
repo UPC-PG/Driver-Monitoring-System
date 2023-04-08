@@ -10,30 +10,43 @@
 ## 环境配置
 
 本项目的运行环境为 __Python 3.9.13__，项目仓库内已经提供了 __requirements.txt__ 文件，但是为了预防万一，请在安装前先阅读下列两点
-+ __Dlib__ 库的安装需要通过下载特定的 whl 文件才能完成！如果直接通过在终端输入命令 
++ __Dlib__ 库的安装可能无法直接通过执行下列命令直接完成！如果你直接执行
     ```
     pip install dlib
     ```
-  将无法正常安装并有报错信息。
-  <br>你需要自行前往[ Dlib 官网](http://dlib.net/)并根据网站提供的[教程](http://dlib.net/compile.html)下载 __Dlib__ 的 whl 文件，在当前环境中安装。
-+ 在安装 __Dlib__ 库之前，还需要安装 __cmake__ 库和 __boost__ 库，并需要有可用的 __C++__ 编译器，而执行下列命令则可以安装 __cmake__ 库和 __boost__ 库
+  有可能无法正常安装并有报错信息。
++ 在安装 __Dlib__ 库之前，还需要安装 __cmake__ 库，并需要有可用的 __C++__ 编译器，而执行下列命令则可以安装 __cmake__ 库
     ```
     pip install cmake
-    pip install boost
     ```
-  这两个库被写入到了 __requirements.txt__ 中，你也可以直接执行下列命令，一样可以完成安装
+  这个库被写入到了 __requirements.txt__ 中，你也可以直接执行下列命令，一样可以完成安装
     ```
     pip install -r requirements.txt
     ```
++ __Dlib__ 库有很多种安装方式，此处只介绍一种。
+<br>前往 __Dlib__ [官网](dlib.net)下载压缩包，将其解压。
+<br>如果你的电脑安装有 __Visual Studio__，那么就打开程序 __x86 Native Tools Command Prompt for VS 20XX__，其中 20XX 对应了你安装的 __Visual Studio__ 版本，如果你找不到这个程序，可以通过开始菜单搜索，也可以选择使用电脑的 CMD 或者 PowerShell 来代替。
+<br>打开程序后，会有一个命令行窗口，请先激活相应的 __Python__ 虚拟环境，参考路径为 */项目名称/venv/Scripts/activate*，你可以通过在命令行执行
+  ```
+  cd /项目名称/venv/Scripts/
+  .\activate
+  ```
+  来激活相应的虚拟环境，激活后应当可以看到命令行带有类似于 (venv) 的前缀。
+<br>如果虚拟环境的 Python 解释器安装在需要管理员权限的文件夹（例如 *C:/Program Files/*）里，请以管理员身份打开命令行窗口，否则有可能会在安装时提示权限不足（Permission Denied）！ 
+<br>激活后，请打开到 __Dlib__ 文件解压的目录，这个目录下有一个 __setup.py__ 的文件，确认打开了相应的目录后，执行下列命令
+  ```
+  python setup.py install
+  ```
+  等待编译完成即可。
 
-## 运行环境
+## 常见问题
 
-如果你的用户文件夹包含中文字符，那么本项目就会无法正常运行。<br>
-例如，你的用户文件夹路径为 C:\Users\中文用户名<br>
-请在代码文件 main.py 开头加入下列代码
-```python
-import os
-os.environ['HUB_HOME'] = './module'
-```
-其中 './module' 指定了本项目目录下的文件夹 module，该文件夹可以自行指定，但不能包含中文。<br>
-此代码只需要在当前用户的用户文件夹包含中文字符时添加，如果用户文件夹名称为纯英文，则不需要添加。
++ 如果你的用户文件夹包含中文字符，那么本项目就会无法正常运行。<br>
+  例如，你的用户文件夹路径为 C:\Users\中文用户名<br>
+  请在代码文件 main.py 开头加入下列代码
+    ```python
+    import os
+    os.environ['HUB_HOME'] = './module'
+    ```
+  其中 './module' 指定了本项目目录下的文件夹 module，该文件夹可以自行指定，但不能包含中文。<br>
+  需要注意的是，此代码只需要在当前用户的用户文件夹包含中文字符时添加，如果用户文件夹名称为纯英文，则没有必要添加。
