@@ -53,7 +53,9 @@ class YawnDetect:
             # ret, frame = cap.read()
             datapack.srcFrame = imutils.resize(datapack.srcFrame, width=720)
             datapack.dstFrame = imutils.resize(datapack.dstFrame, width=720)
-            gray = cv2.cvtColor(datapack.srcFrame, cv2.COLOR_BGR2GRAY)
+            gray = cv2.cvtColor(
+                datapack.srcFrame, 
+                cv2.COLOR_BGR2GRAY)
             # 第六步：使用detector(gray, 0) 进行脸部位置检测
             rects = self.detector(gray, 0)
 
