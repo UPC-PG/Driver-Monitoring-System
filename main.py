@@ -26,7 +26,7 @@ import sys
 from qt_material import apply_stylesheet
 
 class LoginWindow(QMainWindow):
-
+# 此项目由1i9h7_b1u3,Vnhukvm,Syrena和bumianjun共同完成
     def __init__(self):
         super().__init__()
         self.ui = Ui_MainWindow()
